@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIET UNIVERSITY REGISTRATION</title>
+    <style>
+        body {
+            /* Using the GIET campus image you provided */
+            background-image: url('https://www.giet.edu/wp-content/uploads/2020/02/campus-view.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Glassmorphism Effect for the Table */
+        table {
+            background-color: rgba(0, 0, 139, 0.9); /* Dark blue with slight transparency */
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.5);
+            border: 2px solid white;
+        }
+
+        th {
+            padding-bottom: 20px;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        input[type="text"], 
+        input[type="password"], 
+        select, 
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .btn-submit {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-reset {
+            background-color: #f44336; /* Red */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-submit:hover { background-color: #45a049; }
+        .btn-reset:hover { background-color: #da190b; }
+    </style>
+</head>
+<body>
+
+<form action="submit.php" method="POST">
+    <table align="center">
+        <tr>
+            <th colspan="2">
+                <img src="https://www.giet.edu/wp-content/uploads/2020/08/University-Logo-backup.png" alt="GIET Logo" width="350">
+                <h2 style="text-shadow: 2px 2px 4px #000;">Student Registration</h2>
+            </th>
+        </tr>
+
+        <tr>
+            <td>Student NO:</td>
+            <td><input type="text" name="st_no" required></td>
+        </tr>
+
+        <tr>
+            <td>Full Name:</td>
+            <td><input type="text" name="st_name" required></td>
+        </tr>
+
+        <tr>
+            <td>Gender:</td>
+            <td>
+                <input type="radio" name="GENDER" value="male" required> Male
+                <input type="radio" name="GENDER" value="female"> Female
+            </td>
+        </tr>
+
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" name="pass" required></td>
+        </tr>
+
+        <tr>
+            <td>Branch:</td>
+            <td>
+                <select name="BRANCH" required>
+                    <option value="">-- Select Branch --</option>
+                    <option value="CSE">Computer Science (CSE)</option>
+                    <option value="ECE">Electronics (ECE)</option>
+                    <option value="EEE">Electrical (EEE)</option>
+                    <option value="MECH">Mechanical (MECH)</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Address:</td>
+            <td><textarea name="address" rows="3" cols="25"></textarea></td>
+        </tr>
+
+        <tr>
+            <td align="right">
+                <input type="submit" value="Register" class="btn-submit">
+            </td>
+            <td>
+                <input type="reset" value="Clear" class="btn-reset">
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
