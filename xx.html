@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pritam Singh | B.Tech Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --accent-color: #a855f7;
+            --bg-dark: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text-light: #f8fafc;
+            --text-dim: #cbd5e1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+
+        /* Hero Section with Background */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                        url('https://wallpapercave.com/wp/wp2234615.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary-color); }
+        .nav-links { list-style: none; display: flex; }
+        .nav-links li { margin-left: 30px; }
+        .nav-links a { text-decoration: none; color: var(--text-light); transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary-color); }
+
+        .hero h1 { font-size: 4rem; margin-bottom: 10px; animation: fadeIn 1.5s; }
+        .hero p { 
+            color: var(--text-light); 
+            font-size: 1.2rem; 
+            margin-bottom: 30px; 
+            background: rgba(255, 255, 255, 0.1); 
+            padding: 8px 25px; 
+            border-radius: 50px; 
+            backdrop-filter: blur(5px);
+        }
+        
+        .btn-group { display: flex; gap: 15px; }
+        .btn {
+            padding: 12px 35px;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .btn-outline {
+            padding: 12px 35px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-light);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            border: 2px solid var(--primary-color);
+            transition: 0.3s;
+        }
+        .btn:hover, .btn-outline:hover { transform: translateY(-5px); }
+
+        section { padding: 100px 10%; }
+        h2 { font-size: 2.5rem; margin-bottom: 50px; text-align: center; }
+        h2 span { color: var(--primary-color); }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Academic Table Styling */
+        .table-container {
+            overflow-x: auto;
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        table { width: 100%; border-collapse: collapse; text-align: left; }
+        th, td { padding: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+        th { color: var(--primary-color); }
+
+        .skill-container { margin-bottom: 25px; }
+        .progress-bar { width: 100%; height: 8px; background: #334155; border-radius: 10px; overflow: hidden; margin-top: 10px;}
+        .progress-fill { height: 100%; background: var(--primary-color); width: 0%; transition: 2s ease-in-out; }
+
+        footer { text-align: center; padding: 40px; background: #080d1a; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">PRITAM SINGH</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#academics">Academics</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#skills">Skills</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>Pritam Singh</h1>
+        <p>B.Tech First Year Student | Tech Enthusiast</p>
+        <div class="btn-group">
+            <a href="#achievements" class="btn">Experience</a>
+            <a href="your-resume.pdf" download class="btn-outline">Resume</a>
+        </div>
+    </section>
+
+    <section id="academics">
+        <h2>Academic <span>Performance</span></h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>Institution</th>
+                        <th>Year</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>B.Tech (1st Year)</td>
+                        <td>GIET University</td>
+                        <td>2025-2026</td>
+                        <td>8.71</td>
+                    </tr>
+                    <tr>
+                        <td>Class XII (HSC)</td>
+                        <td>DAV PUBLIC SCHOOL</td>
+                        <td>2024</td>
+                        <td>73%</td>
+                    </tr>
+                    <tr>
+                        <td>Class X (SSC)</td>
+                        <td>St.Michael's School</td>
+                        <td>2022</td>
+                        <td>93%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <h2>Key <span>Highlights</span></h2>
+        <div class="grid">
+            <div class="card">
+                <h3>SIH 2025 Nominee</h3>
+                <p>Nominated for the Smart India Hackathon national rounds by my college faculty.</p>
+            </div>
+            <div class="card">
+                <h3>Projectathon Cert.</h3>
+                <p>Successfully completed the Projectathon challenge.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Tech <span>Skills</span></h2>
+        <div class="grid">
+            <div class="skill-container">
+                <div style="display: flex; justify-content: space-between;"><span>Frontend</span><span>80%</span></div>
+                <div class="progress-bar"><div class="progress-fill" data-width="80%"></div></div>
+            </div>
+            <div class="skill-container">
+                <div style="display: flex; justify-content: space-between;"><span>Java/C++</span><span>70%</span></div>
+                <div class="progress-bar"><div class="progress-fill" data-width="70%"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Pritam Singh | comclass585@gmail.com</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    document.querySelectorAll('.progress-fill').forEach(fill => {
+                        fill.style.width = fill.dataset.width;
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+        observer.observe(document.getElementById('skills'));
+    </script>
+</body>
+</html>
